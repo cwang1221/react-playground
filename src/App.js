@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import { BrowserRouter, Routes, Link, Route } from 'react-router-dom'
 import { Products } from './pages/Products'
 import { Cart } from './pages/Cart'
+import { HtmlSanitization } from './pages/HtmlSanitization/HtmlSanitization'
 
 function App() {
   const Container = styled.div`
@@ -30,9 +31,10 @@ function App() {
           </Link>
         </Header>
         <Routes>
-          <Route path="/" element={<div>Welcome</div>} />
+          <Route path="/" element={<HtmlSanitization />} />
           <Route path="/products" element={<Products />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/htmlSanitization" element={<HtmlSanitization />} />
         </Routes>
       </Container>
     </BrowserRouter>
